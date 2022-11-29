@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: corsavanpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: corsavanpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: corsavanpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: corsavanpipelinesjavascriptdocker 
+          image: paulacr2.azurecr.io/corsavanpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
