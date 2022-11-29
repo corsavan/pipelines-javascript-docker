@@ -115,7 +115,7 @@ stages:
               namespace: $(k8sNamespaceForPR)
               manifests: |
                 $(Pipeline.Workspace)/manifests/deployment.yml
-                $(Pipeline.Workspace)/manifests/service.yml
+                $(Pipeline.Workspace)/manifests/service2.yml
               imagePullSecrets: |
                 $(imagePullSecret)
               containers: |
